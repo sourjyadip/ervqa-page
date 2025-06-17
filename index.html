@@ -157,15 +157,21 @@ Models in Hospital Environments</h1>
       </div>
       <div class="item">
         <!-- Your image here -->
+        <div id="results-carousel" class="carousel results-carousel">
         <img src="static/images/ERVQA EMNLP presentation (1).png" alt="MY ALT TEXT"/>
+        </div>
       </div>
       <div class="item">
         <!-- Your image here -->
+        <div id="results-carousel" class="carousel results-carousel">
         <img src="static/images/ERVQA EMNLP presentation (2).png" alt="MY ALT TEXT"/>
+        </div>
      </div>
      <div class="item">
       <!-- Your image here -->
+       <div id="results-carousel" class="carousel results-carousel">
       <img src="static/images/ERVQA EMNLP presentation (3).png" alt="MY ALT TEXT"/>
+         </div>
     </div>
   </div>
 </div>
@@ -173,65 +179,54 @@ Models in Hospital Environments</h1>
 </section>
 <!-- End image carousel -->
 
+<!-- table -->
 
+  <!-- Leaderboard table for ERVQA results -->
+  <section class="section hero is-light">
+<table>
+  <caption>ERVQA Benchmark – Model Leaderboard (zero-, one- and three-shot settings)</caption>
+  <thead>
+    <tr>
+      <th rowspan="2">Model</th>
+      <th rowspan="2">Setting</th>
+      <th colspan="5">Evaluation Metrics ↑ (higher is better)</th>
+    </tr>
+    <tr>
+      <th>BLEU-1</th>
+      <th>ROUGE-L</th>
+      <th>Sentence-BERT</th>
+      <th>Entailment&nbsp;Score</th>
+      <th>CLIP-Score&nbsp;Conf.</th>
+    </tr>
+  </thead>
 
+  <tbody>
+    <!-- ─── Zero-shot ───────────────────────────────────────────────────── -->
+    <tr><td>mPLUG-Owl-7B</td>         <td>Zero-shot</td><td>18.13</td><td>22.32</td><td>65.50</td><td>23.20</td><td>49.93</td></tr>
+    <tr><td>Instruct-BLIP-7B<sup>*</sup></td><td>Zero-shot</td><td>16.82</td><td>20.13</td><td>51.75</td><td>18.32</td><td>48.44</td></tr>
+    <tr><td>Med-Flamingo-9B</td>      <td>Zero-shot</td><td>17.20</td><td>19.17</td><td>64.23</td><td>28.19</td><td>49.20</td></tr>
+    <tr><td>Llava-1.5-13B<sup>*</sup></td><td>Zero-shot</td><td>20.11</td><td>22.78</td><td>66.00</td><td>19.03</td><td>52.31</td></tr>
+    <tr><td>GPT-4V</td>               <td>Zero-shot</td><td>16.63</td><td>20.72</td><td>69.34</td><td>38.98</td><td>51.02</td></tr>
+    <tr><td>Gemini Pro Vision</td>    <td>Zero-shot</td><td>19.83</td><td>24.21</td><td>64.36</td><td>19.10</td><td>49.87</td></tr>
 
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- Youtube embed code here -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End youtube video -->
+    <!-- ─── 1-shot ──────────────────────────────────────────────────────── -->
+    <tr><td>mPLUG-Owl-7B</td>         <td>1-shot</td><td>18.74</td><td>23.01</td><td>69.30</td><td>24.47</td><td>50.98</td></tr>
+    <tr><td>Med-Flamingo-9B</td>      <td>1-shot</td><td>20.76</td><td>25.62</td><td>61.12</td><td>10.49</td><td>48.95</td></tr>
+    <tr><td>Open-Flamingo-9B</td>     <td>1-shot</td><td>18.01</td><td>29.10</td><td>64.34</td><td>11.18</td><td>48.98</td></tr>
+    <tr><td>GPT-4V</td>               <td>1-shot</td><td>22.25</td><td>26.00</td><td>76.79</td><td>40.63</td><td>51.31</td></tr>
+    <tr><td>Gemini Pro Vision</td>    <td>1-shot</td><td>23.27</td><td>27.05</td><td>68.58</td><td>28.94</td><td>50.38</td></tr>
 
+    <!-- ─── 3-shot ──────────────────────────────────────────────────────── -->
+    <tr><td>mPLUG-Owl-7B</td>         <td>3-shot</td><td>20.03</td><td>26.67</td><td>64.83</td><td>20.04</td><td>50.11</td></tr>
+    <tr><td>Med-Flamingo-9B</td>      <td>3-shot</td><td>20.21</td><td>25.34</td><td>61.23</td><td>8.58</td><td>49.56</td></tr>
+    <tr><td>Open-Flamingo-9B</td>     <td>3-shot</td><td>17.54</td><td>28.70</td><td>63.91</td><td>9.07</td><td>49.01</td></tr>
+    <tr><td>GPT-4V</td>               <td>3-shot</td><td>23.66</td><td>27.10</td><td>71.17</td><td>38.22</td><td>51.03</td></tr>
+    <tr><td>Gemini Pro Vision</td>    <td>3-shot</td><td>24.02</td><td>27.67</td><td>68.52</td><td>29.98</td><td>51.23</td></tr>
+  </tbody>
+</table>
 
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" autoplay controls muted loop height="100%">\
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4"
-            type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End video carousel -->
-
-
-
+<p><sup>*</sup> These models were evaluated only in the zero-shot setting.</p>
+  </section>
 
 
 
